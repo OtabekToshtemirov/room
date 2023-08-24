@@ -25,11 +25,16 @@ import { useState } from 'react';
                     </div>
                     
                 </div>
+                <div className="flex justify-center">
+                    <button className="bg-slate-600 text-white px-4 py-2 rounded-full"
+                            onClick={() => setCurrent(current === 0 ? length - 1 : current - 1)}>Prev
+                    </button>
+                    <button className="bg-slate-600 text-white px-4 py-2 rounded-full"
+                            onClick={() => setCurrent(current === length - 1 ? 0 : current + 1)}>Next
+                    </button>
+                </div>
             </section>
-            <div className="flex justify-center">
-                <button className="bg-slate-600 text-white px-4 py-2 rounded-full" onClick={() => setCurrent(current === 0 ? length - 1 : current - 1)}>Prev</button>
-                <button className="bg-slate-600 text-white px-4 py-2 rounded-full" onClick={() => setCurrent(current === length - 1 ? 0 : current + 1)}>Next</button>
-            </div>
+
             
 
         </>
