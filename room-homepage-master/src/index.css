@@ -1,0 +1,15 @@
+/*import font League Spartan 500,600,700*/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'League Spartan', sans-serif;
+    background-color: #F3F4F6;
+    color: #1F2937;
+    font-size: 12px;
+}
