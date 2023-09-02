@@ -1,4 +1,4 @@
-/* tailwind configs */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap'); /* tailwind configs */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,7 +19,6 @@
 /* - Weight: 500, 600, 700 */
 
 /* variables */
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
 
 :root {
     --dark-gray: hsl(0, 0%, 63%);
@@ -32,10 +31,10 @@
 }
 
 body {
-    background-color: var(--white);
-    font-size: var(--font-size);
-    font-family: var(--font-family);
-    font-weight: var(--font-weight);
+    background-color: white;
+    font-size: 12px;
+    font-family:  'League Spartan', sans-serif;
+    font-weight: 500;
     margin: 0;
     padding: 0;
 }
