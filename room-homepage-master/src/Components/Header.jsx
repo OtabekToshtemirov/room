@@ -1,17 +1,15 @@
 import logo from "../../../../room/room-homepage-master/src/images/logo.svg";
 import menu from "../../../../room/room-homepage-master/src/images/icon-hamburger.svg";
 import close from "../../../../room/room-homepage-master/src/images/icon-close.svg";
-import {useState} from 'react'
 
 
-const Header = () => {
+const Header = ({setIsOpen, isOpen}) => {
 
 
-    const [isOpen, setIsOpen] = useState(false)
-   
     return (
         <header className="absolute z-10 p-8 w-full flex items-center justify-center lg:items-center lg:justify-start">
             <div className="flex items-center justify-center">
+
                 <div className="absolute left-8 top-11 z-30 lg:hidden">
                     {isOpen ? (
                         <button onClick={() => setIsOpen(false)}>
@@ -23,8 +21,10 @@ const Header = () => {
                         </button>
                     )}
                 </div>
-                <div className="p-4">
-                    <img src={logo} alt="logo"/>
+                <div className="p-4 ">
+                    <img src={logo} alt="logo" className={''}/>
+
+
                 </div>
                 <div className={`${isOpen ? 'bg-white w-full z-20 absolute top-0' : 'p-4 hidden lg:block'}  `}>
                     <nav className={`${isOpen ? "open z-20 w-full py-8 lg:py-0 lg:w-auto" : ""}`}>
