@@ -1,69 +1,36 @@
 import {data} from '../data.js';
-import {useState} from 'react';
+import { useState } from 'react';
 
 
-import left from '../../images/icon-angle-left.svg'
-import right from '../../images/icon-angle-right.svg'
-import arrow from '../../images/icon-arrow.svg'
-
-
-const Slider = () => {
+ const Slider = () => {
     const [current, setCurrent] = useState(0);
     const length = data.length;
 
     return (
         <>
             <section className=" w-full mx-auto p-0 min-w-min">
-                <div className="grid lg:grid-cols-2 grid-cols-1 r ">
-                    <div className={'relative'}>
+                <div className="grid lg:grid-cols-2 grid-cols-1 items-center ">
+                    <div>
                         <img className="w-full" src={data[current].image} alt="image1"/>
-                        <div className="lg:hidden md:block absolute bottom-0 right-0 flex justify-center border-white b-4">
-                            <button
-                                className="hover:bg-slate-500 bg-slate-900 text-white px-6 py-4  justify-between items-center"
-                                onClick={() => setCurrent(current === 0 ? length - 1 : current - 1)}><img src={left}
-                                                                                                          alt=""/>
-                            </button>
-                            <button
-                                className="hover:bg-slate-500  bg-slate-900 text-white px-6 py-4 justify-between items-center"
-                                onClick={() => setCurrent(current === length - 1 ? 0 : current + 1)}><img src={right}
-                                                                                                          alt=""/>
-                            </button>
-                        </div>
-
                     </div>
-                    <div className="relative p-8 lg:p-12">
-                        <h1 className="text-slate-900 text-3xl lg:text-5xl">
+                    <div className="lg:p-6 p-8">
+                        <h2 className={'lg:text-2xl text-base  uppercase font-semibold tracking-widest mt-4'}>
                             {data[current].title}
-                        </h1>
-                        <p className="text-slate-900 opacity-75 my-6">{data[current].description}</p>
-                        <button
-                            className="flex items-center gap-4 uppercase hover:opacity-75"
-                            style={{
-                                letterSpacing: "0.7rem",
-                            }}
+                        </h2>
+                        <p
+                            className={'text-slate-600 opacity-75 mt-6 leading-5  font-light text-base  mb-4'}
                         >
-                            Shop Now <img src={arrow} alt="" />
-                        </button>
-
-                        <div className="lg:block hidden absolute bottom-0 left-0 flex justify-center border-white b-4">
-                            <button
-                                className="hover:bg-slate-500 bg-slate-900 text-white px-6 py-4  justify-between items-center"
-                                onClick={() => setCurrent(current === 0 ? length - 1 : current - 1)}><img src={left}
-                                                                                                          alt=""/>
-                            </button>
-                            <button
-                                className="hover:bg-slate-500  bg-slate-900 text-white px-6 py-4 justify-between items-center"
-                                onClick={() => setCurrent(current === length - 1 ? 0 : current + 1)}><img src={right}
-                                                                                                          alt=""/>
-                            </button>
-                        </div>
-
+                            {data[current].description}
+                        </p>
                     </div>
-
+                    
                 </div>
-
             </section>
-
+            <div className="flex justify-center">
+                <button className="bg-slate-600 text-white px-4 py-2 rounded-full" onClick={() => setCurrent(current === 0 ? length - 1 : current - 1)}>Prev</button>
+                <button className="bg-slate-600 text-white px-4 py-2 rounded-full" onClick={() => setCurrent(current === length - 1 ? 0 : current + 1)}>Next</button>
+            </div>
+            
 
         </>
     );
