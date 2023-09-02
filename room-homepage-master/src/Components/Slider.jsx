@@ -1,5 +1,5 @@
-import left from '../images/icon-angle-left.svg'
-import right from '../images/icon-angle-right.svg'
+import left from '../../public/images/icon-angle-left.svg'
+import right from '../../public/images/icon-angle-right.svg'
 
 
 const Slider = ({rightClick, leftClick, data, current}) => {
