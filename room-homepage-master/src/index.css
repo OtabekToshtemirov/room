@@ -1,15 +1,40 @@
-/*import font League Spartan 500,600,700*/
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap'); /* tailwind configs */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
-    font-family: 'League Spartan', sans-serif;
-    background-color: #F3F4F6;
-    color: #1F2937;
+/* ## Colors */
+/* ### Primary */
+/* - Dark-gray: hsl(0, 0%, 63%) */
+/* - Black: hsl(0, 0%, 0%) */
+/* - White: hsl(0, 0%, 100%) */
+/* - Very dark-gray: hsl(0, 0%, 27%) */
+
+/* ## Typography */
+/* ### Body Copy */
+/* - Font size: 12 pixels */
+
+/* ### Font */
+/* - Family: League Spartan */
+/* - Weight: 500, 600, 700 */
+
+/* variables */
+
+:root {
+    --dark-gray: hsl(0, 0%, 63%);
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --very-dark-gray: hsl(0, 0%, 27%);
+    --font-size: 12px;
+    --font-family: 'League Spartan', sans-serif;
+    --font-weight: 500;
+}
+
+body {
+    background-color: white;
     font-size: 12px;
+    font-family:  'League Spartan', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
 }

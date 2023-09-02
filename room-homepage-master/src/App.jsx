@@ -1,6 +1,8 @@
-import  Header  from './components/Header.jsx'
-import  Slider  from './components/Slider.jsx'
-import Lowersection from "./Components/Lowersection.jsx";
+
+import './App.css'
+import Header from './Components/Header.jsx'
+import Slider from './Components/Slider.jsx'
+import Lowersection from './Components/Lowersection.jsx'
 
 function App() {
 
@@ -14,4 +16,4 @@ function App() {
   )
 }
 
-export default App ;
+export default App
